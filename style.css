@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+*{   
+    margin: 0;
+    padding: 0;
+} 
+
+html{
+    background: linear-gradient(#ffffff,#4873fd);
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.alimentos{
+    display: flex;
+    position: relative;
+    width: 900px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;    
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.alimentos .ilustracao{
+    position: relative;
+    left: -70px;
+    width: 45%;
+    margin: 10px;
+}
+.alimentos .ilustracao:hover{
+    width: 52%;
+    transition: 0.5s;
+}
+
+.alimentos .conteudo{
+    width: 48%;
+    margin-top: 20px;
+}
+
+.alimentos .conteudo h1{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.alimentos .conteudo p{
+    font-size: 12px;
+}
+
+.alimentos .conteudo .items{
+    list-style-type: none;
+}
+
+
+.alimentos .conteudo .items .item{
+    cursor: pointer;
+    background-image: url("imagens/setapbaixo.jpg");
+    background-repeat: no-repeat;
+    background-position: top 8px right 0;
+    background-size: 12px;
+    border-bottom: 1px solid #ccc;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.alimentos .conteudo .items .item:last-child{
+    border-bottom: none; 
+}
+
+.item .produto{
+    padding-bottom: 15px;
+    font-size: 18px;
+    width: 90%;
+    transition: 0s;
+}
+
+.item .produto:hover{
+    color: rgb(2, 34, 0);
+    background-color: rgb(113, 255, 113);
+    width: 200px;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+
+}
+
+.item .valor {
+    font-weight: 400;
+}
+
+.item .sobre{
+    display: none;
+    padding-bottom: 15px;
+}
+
+/* ESTILOS DO ITEM ATIVO*/
+.alimentos .items .item.ativo .produto id {
+    font-weight: 700;
+} 
+
+
+.alimentos .items .item.ativo .sobre {
+    display: block; 
+}
+
+.alimentos .items .item.ativo {
+    background-image: url("imagens/setapcima.jpg");
+} 
+
+@media(max-width: 1440px){
+    .alimentos{       
+        flex-direction: column;
+        width: 100%;
+    } 
+
+    .alimentos .conteudo{
+        width: 100%;
+    }
+    .alimentos .conteudo h1{
+        text-align: center;
+    }
+
+    .alimentos .items{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .alimentos .items .produto{
+        font-size: 16px;
+    }
+
+    .alimentos .ilustracao{
+        width: 40%;
+        left: 0;
+        margin: 30px;
+    }
+}
+
+@media(max-width: 425px){
+    .alimentos {
+        height: 100%;        
+    }    
+} 
